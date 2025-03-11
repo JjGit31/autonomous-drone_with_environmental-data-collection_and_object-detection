@@ -1,8 +1,0 @@
-prefix=/home/Rpi/mq135_ws/devel
-
-Name: mq135_sensor
-Description: Description of mq135_sensor
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

@@ -1,8 +1,0 @@
-prefix=/home/Rpi/usb_camera/devel
-
-Name: usb_camera_pkg
-Description: Description of usb_camera_pkg
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

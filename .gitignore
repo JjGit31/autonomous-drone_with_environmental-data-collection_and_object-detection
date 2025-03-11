@@ -30,11 +30,11 @@ cone_images/
 panoramas/
 
 # Exclude build, logs, and system-generated files
-build/
-devel/
-install/
-logs/
-log/
+**/build/
+**/devel/
+**/install/
+**/logs/
+**/log/
 *.log
 *.tlog
 *.log.raw
@@ -44,14 +44,18 @@ log/
 *.bag.tmp
 
 # Ignore ROS-generated & compiled files
-CMakeLists.txt
-CMakeCache.txt
+**/CMakeLists.txt.user
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/CMakeFiles/
+**/Makefile
+**/compile_commands.json
 *.launch~
 *.pyc
 *.pyo
 *.pyd
 *.swp
-__pycache__/
+**/__pycache__/
 
 # Ignore system-related directories & cache files
 raspi-config/

@@ -1,8 +1,0 @@
-prefix=/home/Rpi/camera_node/devel
-
-Name: cone_detection
-Description: Description of cone_detection
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
