@@ -10,7 +10,6 @@ rtl8812au/
 valt/
 
 # Exclude panorama & stitching files
-
 verticalpano.py
 videopano.py
 test_stitch.py
@@ -32,12 +31,41 @@ panoramas/
 
 # Exclude build, logs, and system-generated files
 build/
+devel/
+install/
+logs/
+log/
 *.log
 *.tlog
 *.log.raw
 *.parm
+*.bag
+*.bag.active
+*.bag.tmp
 
+# Ignore ROS-generated & compiled files
+CMakeLists.txt
+CMakeCache.txt
+*.launch~
+*.pyc
+*.pyo
+*.pyd
+*.swp
+__pycache__/
+
+# Ignore system-related directories & cache files
 raspi-config/
+.cache/
+.ccache/
+.config/
+.dronekit/
+.local/
+.ros/
+.rviz/
+.ssh/
+.tilecache/
+
+# Ignore unwanted system/user files
 .Xauthority
 .bash_history
 .bash_logout
@@ -52,29 +80,8 @@ raspi-config/
 .sudo_as_admin_successful
 .viminfo
 .wget-hsts
-.Xauthority
-.bash_history
-.bash_logout
-.bashrc
-.bmp280.py.swp
-.bmp280_data.py.swp
-.dronekit_main_2.py.swp
-.gitconfig
-.lesshsQ
-.profile
-.python_history
-.sudo_as_admin_successful
-.viminfo
-.wget-hsts
+
+# Ignore raw telemetry & I2C communication logs
 mav.tlog.raw
 smbus
-.cache
-.ccache
-.config
-.dronekit
-.local
-.ros
-.rviz
-.ssh
-.tilecache
-__pycache__
+
