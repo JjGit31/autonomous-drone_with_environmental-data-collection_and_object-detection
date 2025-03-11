@@ -1,7 +1,0 @@
-# This file is created by ibus-daemon, please do not modify it.
-# This file allows processes on the machine to find the
-# ibus session bus with the below address.
-# If the IBUS_ADDRESS environment variable is set, it will
-# be used rather than this file.
-IBUS_ADDRESS=unix:abstract=/home/Rpi/.cache/ibus/dbus-DWf6xBBb,guid=636bf70f25f524f1f5bf7d7f6790d185
-IBUS_DAEMON_PID=1613
