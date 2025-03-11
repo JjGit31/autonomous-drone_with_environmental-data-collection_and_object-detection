@@ -1,0 +1,8 @@
+prefix=/home/Rpi/sens_wks/devel
+
+Name: temp
+Description: Description of temp
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

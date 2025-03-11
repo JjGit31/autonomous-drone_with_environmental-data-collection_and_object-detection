@@ -1,0 +1,16 @@
+<launch>
+    <!-- Launch the USB camera node -->
+    <node pkg="usb_cam" type="usb_cam_node" name="usb_cam_node" output="log">
+        <param name="video_device" value="/dev/video0" />
+        <param name="image_width" value="640" />
+        <param name="image_height" value="480" />
+        <param name="pixel_format" value="yuyv" />
+        <param name="io_method" value="mmap" />
+        <param name="camera_frame_id" value="usb_cam" />
+        <param name="camera_name" value="my_usb_cam" />
+        <param name="focus_absolute" value="0" />
+        <param name="white_balance_auto" value="true" />
+	<param name="framerate" value="30" />
+        <remap from="image_raw" to="usb_cam/raw" />
+    </node>
+</launch>

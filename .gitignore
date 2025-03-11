@@ -1,0 +1,39 @@
+# Exclude large frameworks & unnecessary directories
+PX4-Autopilot/
+MyCopter/
+catkin_ws/
+lidar_ws/
+YDLidar-SDK/
+ydlidar/
+ydlidar_ws/
+rtl8812au/
+valt/
+
+# Exclude panorama & stitching files
+
+verticalpano.py
+videopano.py
+test_stitch.py
+final.py
+check_images.py
+hb_request.py
+panorama_ros.py
+preprocess.py
+sam1.py
+
+# Exclude unnecessary scripts & datasets
+ros_install_noetic.sh
+sample.py
+
+# Exclude image processing & panoramic data
+images/
+cone_images/
+panoramas/
+
+# Exclude build, logs, and system-generated files
+build/
+*.log
+*.tlog
+*.log.raw
+*.parm
+

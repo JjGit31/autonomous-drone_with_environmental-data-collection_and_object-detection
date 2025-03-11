@@ -1,0 +1,170 @@
+In file included from /home/Rpi/YDLidar-SDK/./core/serial/common.h:45,
+                 from /home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:6:
+/home/Rpi/YDLidar-SDK/./core/base/thread.h: In member function ‘int ydlidar::core::base::Thread::join(long unsigned int)’:
+/home/Rpi/YDLidar-SDK/./core/base/thread.h:135:46: warning: format ‘%X’ expects argument of type ‘unsigned int’, but argument 2 has type ‘_size_t’ {aka ‘long unsigned int’} [-Wformat=]
+  135 |           printf("[YDLIDAR DEBUG] Thread [0x%X] ready to cancel[%d]\n", _handle, s);
+      |                                             ~^                          ~~~~~~~
+      |                                              |                          |
+      |                                              unsigned int               _size_t {aka long unsigned int}
+      |                                             %lX
+/home/Rpi/YDLidar-SDK/./core/base/thread.h:137:46: warning: format ‘%X’ expects argument of type ‘unsigned int’, but argument 2 has type ‘_size_t’ {aka ‘long unsigned int’} [-Wformat=]
+  137 |           printf("[YDLIDAR DEBUG] Thread [0x%X] ready to cancel[%d] time[%u]\n",
+      |                                             ~^
+      |                                              |
+      |                                              unsigned int
+      |                                             %lX
+  138 |             _handle, s, getms() - t);
+      |             ~~~~~~~                           
+      |             |
+      |             _size_t {aka long unsigned int}
+/home/Rpi/YDLidar-SDK/./core/base/thread.h:141:42: warning: format ‘%X’ expects argument of type ‘unsigned int’, but argument 2 has type ‘_size_t’ {aka ‘long unsigned int’} [-Wformat=]
+  141 |             printf("[YDLIDAR] Thread [0x%X] has been canceled in other thread\n", _handle);
+      |                                         ~^                                        ~~~~~~~
+      |                                          |                                        |
+      |                                          unsigned int                             _size_t {aka long unsigned int}
+      |                                         %lX
+/home/Rpi/YDLidar-SDK/./core/base/thread.h:146:74: warning: format ‘%X’ expects argument of type ‘unsigned int’, but argument 3 has type ‘_size_t’ {aka ‘long unsigned int’} [-Wformat=]
+  146 |             fprintf(stderr, "[YDLIDAR] An error occurred while thread[0x%X] cancelled!\n", _handle);
+      |                                                                         ~^                 ~~~~~~~
+      |                                                                          |                 |
+      |                                                                          unsigned int      _size_t {aka long unsigned int}
+      |                                                                         %lX
+/home/Rpi/YDLidar-SDK/./core/base/thread.h:150:40: warning: format ‘%X’ expects argument of type ‘unsigned int’, but argument 2 has type ‘_size_t’ {aka ‘long unsigned int’} [-Wformat=]
+  150 |           printf("[YDLIDAR] Thread [0x%X] has been canceled\n", _handle);
+      |                                       ~^                        ~~~~~~~
+      |                                        |                        |
+      |                                        unsigned int             _size_t {aka long unsigned int}
+      |                                       %lX
+In file included from /home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:7:
+/home/Rpi/YDLidar-SDK/./core/common/ydlidar_help.h: In function ‘void ydlidar::core::common::debug(char*, ...)’:
+/home/Rpi/YDLidar-SDK/./core/common/ydlidar_help.h:96:10: warning: format not a string literal and no format arguments [-Wformat-security]
+   96 |   printf(buff); \
+      |          ^~~~
+/home/Rpi/YDLidar-SDK/./core/common/ydlidar_help.h:105:3: note: in expansion of macro ‘FORMAT_STDOUT’
+  105 |   FORMAT_STDOUT
+      |   ^~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/./core/common/ydlidar_help.h: In function ‘void ydlidar::core::common::info(char*, ...)’:
+/home/Rpi/YDLidar-SDK/./core/common/ydlidar_help.h:96:10: warning: format not a string literal and no format arguments [-Wformat-security]
+   96 |   printf(buff); \
+      |          ^~~~
+/home/Rpi/YDLidar-SDK/./core/common/ydlidar_help.h:115:3: note: in expansion of macro ‘FORMAT_STDOUT’
+  115 |   FORMAT_STDOUT
+      |   ^~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/./core/common/ydlidar_help.h: In function ‘void ydlidar::core::common::warn(char*, ...)’:
+/home/Rpi/YDLidar-SDK/./core/common/ydlidar_help.h:96:10: warning: format not a string literal and no format arguments [-Wformat-security]
+   96 |   printf(buff); \
+      |          ^~~~
+/home/Rpi/YDLidar-SDK/./core/common/ydlidar_help.h:125:3: note: in expansion of macro ‘FORMAT_STDOUT’
+  125 |   FORMAT_STDOUT
+      |   ^~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/./core/common/ydlidar_help.h: In function ‘void ydlidar::core::common::error(char*, ...)’:
+/home/Rpi/YDLidar-SDK/./core/common/ydlidar_help.h:96:10: warning: format not a string literal and no format arguments [-Wformat-security]
+   96 |   printf(buff); \
+      |          ^~~~
+/home/Rpi/YDLidar-SDK/./core/common/ydlidar_help.h:136:3: note: in expansion of macro ‘FORMAT_STDOUT’
+  136 |   FORMAT_STDOUT
+      |   ^~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/./core/common/ydlidar_help.h: In function ‘bool ydlidar::core::common::printfDeviceInfo(const device_info&, int)’:
+/home/Rpi/YDLidar-SDK/./core/common/ydlidar_help.h:1111:8: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ 1111 |   info("%s device info\n"
+      |        ^~~~~~~~~~~~~~~~~~
+ 1112 |          "Firmware version: %u.%u\n"
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1113 |          "Hardware version: %u\n"
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~
+ 1114 |          "Model: %s\n"
+      |          ~~~~~~~~~~~~~
+ 1115 |          "Serial: %s",
+      |          ~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp: In member function ‘virtual result_t ydlidar::TiaLidarDriver::connect(const char*, uint32_t)’:
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:81:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   81 |         error("Fail to connect TCP [%s:%d],Error [%s]",
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:86:10: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   86 |     info("Connect TCP [%s:%d]", m_port.c_str(), m_port2);
+      |          ^~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:90:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   90 |         error("Fail to connect UDP [%s:%d],Error [%s]",
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:96:10: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   96 |     info("Connect UDP [%s:%d]", m_port.c_str(), m_baudrate);
+      |          ^~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp: In member function ‘void ydlidar::TiaLidarDriver::configDisconnect()’:
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:179:14: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  179 |         info("Disconnect TCP");
+      |              ^~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp: In member function ‘bool ydlidar::TiaLidarDriver::createThread()’:
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:275:13: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  275 |       error("Fail to create data thread");
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:278:10: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  278 |     info("Create TIA thread 0x%X", m_thread->get_id());
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp: In member function ‘void ydlidar::TiaLidarDriver::dataDisconnect()’:
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:373:14: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  373 |         info("Disconnect UDP");
+      |              ^~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp: In member function ‘int ydlidar::TiaLidarDriver::parseScanDataThread()’:
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:546:27: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  546 |                     error("Exit scanning thread!");
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:566:23: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  566 |                 error("Timout count [%d]", timeout_count);
+      |                       ^~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp: In member function ‘int ydlidar::TiaLidarDriver::parseParamInfoThread()’:
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:613:23: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  613 |                 debug("ScanFreq: %f SampleRate: %f",
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp: In member function ‘bool ydlidar::TiaLidarDriver::setParam(const string&, const float&)’:
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:660:18: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  660 |             warn("TIA scanning frequency [%.02fHz] setting is incorrect", v);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:669:18: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  669 |             warn("TIA sampling rate [%.02fK/s] setting is incorrect", v);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:678:18: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  678 |             warn("TIA scanning frequency [%dHz] setting is incorrect", v);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:687:18: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  687 |             warn("TIA sampling rate [%dK/s] setting is incorrect", v);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp: In member function ‘bool ydlidar::TiaLidarDriver::setParam(cJSON*)’:
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:709:14: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  709 |         warn("Fail to set lidar parameter,Error to response");
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp: In member function ‘bool ydlidar::TiaLidarDriver::sendData(cJSON*)’:
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:742:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  742 |         debug("[SEND] %s", sd.c_str());
+      |               ^~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:745:14: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  745 |         warn("Fail to send TCP data");
+      |              ^~~~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp: In member function ‘bool ydlidar::TiaLidarDriver::waitResp(cJSON*&, uint32_t)’:
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:764:23: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  764 |                 debug("[RECV] %s", rd.c_str());
+      |                       ^~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:769:22: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  769 |                 warn("Fail to wait response,Error json format");
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:776:10: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  776 |     warn("Waiting for response timeout [%u]ms", timeout);
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp: In member function ‘result_t ydlidar::TiaLidarDriver::getScanData(node_info*, size_t&)’:
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:798:18: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  798 |             warn("Fail to recv UDP data");
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:803:18: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  803 |             warn("The packet length [%d] < the expected value [%d]",
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:844:14: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  844 |         warn("Data packet lost,current packet index [%u],last packet index [%u]",
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:865:18: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  865 |             warn("The format of the [%d] packet header is incorrect", i + 1);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:899:27: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  899 |                     debug("Zero time [%llu]ns", lastZeroTime);
+      |                           ^~~~~~~~~~~~~~~~~~~~
+/home/Rpi/YDLidar-SDK/src/TiaLidarDriver.cpp:943:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  943 |         debug("Angle range [%.02f~%.02f] stamp [%lu]ns index [%u]",
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
